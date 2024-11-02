@@ -14,7 +14,9 @@ script.onload = () => {
         const tg = window.Telegram.WebApp;
         tg.expand();
         setTimeout(() => { tg.expand() }, 500);
-        console.log("+++ Telegram ", tg.version);
+        tg.disableVerticalSwipes();
+        tg.allow_vertical_swipe = false;
+        console.log("TG VERSION", tg.version);
     }
 };
 document.body.appendChild(script);
